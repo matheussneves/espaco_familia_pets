@@ -1,28 +1,17 @@
-import styled from 'styled-components';
+import { Navbar, Nav } from 'rsuite';
+import 'rsuite/dist/rsuite.css';
 
-const MenuEstilizado = styled.header`
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2em 4em
-`
 
-const Container = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-grow: .1;
-`
+ function Menu() {
+     return (
+<Navbar appearance='inverse'>
+    <Navbar.Brand  href="#">Espaço Familia & Pets</Navbar.Brand>
+    <Nav>
+      <Nav.Item href="/">Home</Nav.Item>
+      <Nav.Item href="/Pesquisa">Pesquisa</Nav.Item>
+    </Nav>
+  </Navbar>
+     )
+ }
 
-const LinkEstilizado = styled.a`
- color: var(--azul-escuro);
- font-weight: 700;
-`
-
-function Menu() {
-    return (
-        <a></a>
-    )
-}
-
-export default Menu;
+ export default Menu;
