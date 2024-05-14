@@ -17,9 +17,9 @@ export default function Home() {
   return (
     <>
       <Menu />
-      <Slide/>
+      <Slide locais={locais} banners={10}/>
       <Container>
-      <GridLugares locais={locais}> Lugares:</GridLugares>
+      <GridLugares locais={locais} cards={8}> Lugares:</GridLugares>
       </Container>
       <Rodape />
     </>

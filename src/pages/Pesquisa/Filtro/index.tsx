@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import pesquisa from './assets/search.png';
 import pin from './assets/pin.png'
-import { Grid, Row, Col } from 'rsuite';
+import { Grid, Row, Col, Checkbox } from 'rsuite';
 
 interface Props {
     imagem?: string,
@@ -29,7 +29,7 @@ box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
 border-radius: 8px;
 padding: 2em 5em;
 text-align: center;
-margin: 3em 0;
+margin: 0em 0 3em 0;
 `
 
 const Botao = styled.button`
@@ -94,40 +94,17 @@ export default function Formulario() {
             </ContainerFormulario>
             <Titulo>Use os filtros abaixo para encontrar o lugar perfeito para visitar hoje:</Titulo>
             <Grid fluid>
-            <TituloFiltro>Para os pets:</TituloFiltro>
                 <Row gutter={1}>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
-                        <ItemLista>
-                            <label id="cars">Aceita pets: </label>
-                            <input type="checkbox"  />
-                        </ItemLista>
+                    <Col xs={22} sm={12} md={12} lg={10} xl={10} xxl={10}>
+                    <label>Para os pets:</label>
+                        <Checkbox >Aceita pets</Checkbox>
+                        <Checkbox >Espaço Pets</Checkbox>
                     </Col>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
-                        <ItemLista>
-                            <label id="cars">Espaço Pets: </label>
-                            <input type="checkbox"  />
-                        </ItemLista>
-                    </Col>
-                </Row>
-                <TituloFiltro>Para as crianças:</TituloFiltro>
-                <Row gutter={1}>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
-                        <ItemLista>
-                        <label id="cars">Aceita Crianças: </label>
-                        <input type="checkbox"  />
-                        </ItemLista>
-                    </Col>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
-                        <ItemLista>
-                            <label id="cars">Trocador: </label>
-                            <input type="checkbox"  />
-                        </ItemLista>
-                    </Col>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
-                        <ItemLista>
-                            <label id="cars">Espaço Kids: </label>
-                            <input type="checkbox"  />
-                        </ItemLista>
+                    <Col xs={22} sm={12} md={12} lg={10} xl={10} xxl={10}>
+                    <label>Para as crianças:</label>
+                        <Checkbox >Aceita Crianças</Checkbox>
+                        <Checkbox >Trocador</Checkbox>
+                        <Checkbox >Espaço Kids</Checkbox>
                     </Col>
                 </Row>
             </Grid>
