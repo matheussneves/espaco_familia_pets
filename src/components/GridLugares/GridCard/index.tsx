@@ -4,7 +4,7 @@ import ILocais from "../../../types/ILocais";
 import styled from "styled-components";
 import { Rating } from "@mui/material";
 import Botao from "../../Botao";
-
+import Modal from '../../Modal';
 
 
 const ContainerEstilizado = styled.div`
@@ -27,15 +27,11 @@ const ItemInformacoesEstilizado = styled(ItemEstilizado)`
     flex-grow: 1;
 `
 
-
 const ImagemEstilizada = styled.img`
     border-radius: 8px 8px 0px 0px;
     width: 100%;
     object-fit: cover;
     height: 70%;
-
-    
-    
 `
 const ListaEstilizada = styled.ul`
     display: flex;
@@ -50,15 +46,14 @@ const ParagrafoNomeEstilizado = styled.p`
     font-weight: 700;
 `
 
-
 const ParagrafoEstilizado = styled.p`
-    width: 2em;
+    align-items: left;
     margin: .5em 7px;
     font-size: 14px
 `
 
-
 export default function GridCard ({ local }: { local: ILocais }){
+
     return (
       <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={6}>
         <ContainerEstilizado >
@@ -81,8 +76,12 @@ export default function GridCard ({ local }: { local: ILocais }){
                     <ParagrafoEstilizado>{local.especialidade}</ParagrafoEstilizado>
                 </ItemInformacoesEstilizado>
                 <ItemInformacoesEstilizado>
-                    <Botao>Ver mais...</Botao>
+                    <ParagrafoEstilizado></ParagrafoEstilizado>
                 </ItemInformacoesEstilizado>
+                <ItemEstilizado>
+                    <Modal local={local}/>
+                </ItemEstilizado>
+                
                
             </ListaEstilizada>
             </ContainerEstilizado>

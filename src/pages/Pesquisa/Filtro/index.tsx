@@ -85,7 +85,6 @@ margin: 1em 0em 1em 0.5em;
 `
 
 export default function Formulario() {
-    var xxl = 3;
     return (
         <Container>
             <ContainerFormulario>
@@ -97,13 +96,13 @@ export default function Formulario() {
             <Grid fluid>
             <TituloFiltro>Para os pets:</TituloFiltro>
                 <Row gutter={1}>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={xxl}>
+                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
                         <ItemLista>
                             <label id="cars">Aceita pets: </label>
                             <input type="checkbox"  />
                         </ItemLista>
                     </Col>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={xxl}>
+                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
                         <ItemLista>
                             <label id="cars">Espaço Pets: </label>
                             <input type="checkbox"  />
@@ -112,19 +111,19 @@ export default function Formulario() {
                 </Row>
                 <TituloFiltro>Para as crianças:</TituloFiltro>
                 <Row gutter={1}>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={xxl}>
+                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
                         <ItemLista>
                         <label id="cars">Aceita Crianças: </label>
                         <input type="checkbox"  />
                         </ItemLista>
                     </Col>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={xxl}>
+                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
                         <ItemLista>
                             <label id="cars">Trocador: </label>
                             <input type="checkbox"  />
                         </ItemLista>
                     </Col>
-                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={xxl}>
+                    <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={3}>
                         <ItemLista>
                             <label id="cars">Espaço Kids: </label>
                             <input type="checkbox"  />
