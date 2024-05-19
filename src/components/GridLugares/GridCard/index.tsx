@@ -57,7 +57,7 @@ export default function GridCard ({ local }: { local: ILocais }){
     return (
       <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={6}>
         <ContainerEstilizado >
-        <ImagemEstilizada src={local.imagens[(Math.floor(Math.random() * local.imagens.length))]} alt={`Foto local ${local.nome}`} />
+        <ImagemEstilizada src={local.url} alt={`Foto local ${local.nome}`} />
              
              <ListaEstilizada>
              <ItemInformacoesEstilizado>
@@ -73,7 +73,7 @@ export default function GridCard ({ local }: { local: ILocais }){
             </ListaEstilizada>
             <ListaEstilizada>
                 <ItemInformacoesEstilizado>
-                    <ParagrafoEstilizado>{local.tipo_de_lugar}</ParagrafoEstilizado>
+                    <ParagrafoEstilizado>{local.tipo_lugar}</ParagrafoEstilizado>
                 </ItemInformacoesEstilizado>
                 <ItemInformacoesEstilizado>
                     <ParagrafoEstilizado></ParagrafoEstilizado>

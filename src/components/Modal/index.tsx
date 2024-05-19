@@ -80,7 +80,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     setTimeout(() => setRows(80), 2000);
   };
   var aceita_pets
-  if ( local.aceita_pets == true) {
+  if ( local.aceita_pets == 'Sim') {
     aceita_pets = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Aceita pets</label>
@@ -88,7 +88,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   var espaco_pets
-  if ( local.espaco_pets == true) {
+  if ( local.espaco_pets == 'Sim') {
     espaco_pets = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Espaço Pets</label>
@@ -96,7 +96,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   var aceita_criancas
-  if ( local.aceita_criancas == true) {
+  if ( local.aceita_criancas == 'Sim') {
     aceita_criancas = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Aceita Crianças</label>
@@ -104,7 +104,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   var banheiro_trocador
-  if ( local.banheiro_trocador == true) {
+  if ( local.banheiro_trocador == 'Sim') {
     banheiro_trocador = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Banheiro com Trocador</label>
@@ -112,7 +112,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   var espaco_kids
-  if ( local.espaco_kids == true) {
+  if ( local.espaco_kids == 'Sim') {
     espaco_kids = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Espaço Kids</label>
@@ -120,7 +120,6 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   
-
   return (
     <>
       <ButtonToolbar>
@@ -141,7 +140,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
         <Modal.Body>
         <Grid fluid>
     <Row className="show-grid">
-    <ImagemEstilizada src={local.imagens[(Math.floor(Math.random() * local.imagens.length))]} alt={`Foto local ${local.nome}`} />
+    <ImagemEstilizada src={local.url} alt={`Foto local ${local.nome}`} />
     </Row>
         <Row>
         <ListaEstilizada>
@@ -149,7 +148,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
              <ParagrafoNomeEstilizado>Nome: {local.nome}</ParagrafoNomeEstilizado>
                 </ItemInformacoesEstilizado>
                 <ItemInformacoesEstilizado>
-                    <ParagrafoEstilizado> Tipo: {local.tipo_de_lugar}</ParagrafoEstilizado>
+                    <ParagrafoEstilizado> Tipo: {local.tipo_lugar}</ParagrafoEstilizado>
                 </ItemInformacoesEstilizado>
                 <ItemEstilizado>
                     <Rating
@@ -167,7 +166,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
                 <label>Endereço: {local.endereco}</label>
         </Col>
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
-                <label>Horário de funcionamento: {local.horario_de_funcionamento}</label>
+                <label>Horário de funcionamento: {local.horario}</label>
         </Col>
       </Row>
       <Row gutter={1}>

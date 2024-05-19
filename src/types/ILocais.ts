@@ -1,14 +1,15 @@
 export default interface ILocais {
+    id: number,
     nome: string,
-    tipo_de_lugar: string,
+    tipo_lugar: string,
     endereco: string,
-    aceita_criancas: boolean,
-    aceita_pets: boolean,
-    banheiro_trocador:  boolean,
-    espaco_pets:  boolean,
-    horario_de_funcionamento: string,
-    espaco_kids:  boolean,
-    rede_social: string,
+    aceita_criancas: string,
+    aceita_pets: string,
+    banheiro_trocador:  string,
+    espaco_pets:  string,
+    horario: string,
+    espaco_kids:  string,
+    instagram_link: string,
     avaliacao: number,
-    imagens: Array<string>
+    url:string
 }
