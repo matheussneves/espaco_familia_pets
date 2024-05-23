@@ -31,22 +31,22 @@ function Rodape() {
         <RodapeEstilizado>
             <ListaEstilizada>
                 <ItemEstilizado>
-                    <a href="#">
+                    <a href="/#">
                         <img src={facebook} alt="logo do facebook" />
                     </a>
                 </ItemEstilizado>
                 <ItemEstilizado>
-                    <a href="#">
+                    <a href="/#">
                         <img src={whatsapp} alt="logo do whatsapp" />
                     </a>
                 </ItemEstilizado>
                 <ItemEstilizado>
-                    <a href="#">
+                    <a href="/#">
                         <img src={google} alt="logo do google" />
                     </a>
                 </ItemEstilizado>
                 <ItemEstilizado>
-                    <a href="#">
+                    <a href="/#">
                         <img src={instagram} alt="logo do instagram" />
                     </a>
                 </ItemEstilizado>

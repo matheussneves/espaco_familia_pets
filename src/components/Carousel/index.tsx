@@ -9,8 +9,8 @@ function Slide({ locais, banners = 5 }: Props) {
     return(
         <Carousel autoplay className="custom-slider">
             {locais?.map((local, index) => {
-                    if (index < banners) {return <img src={local.url} height="250" />}
-                })}
+                    if (index < banners) {return <img src={local.imagens[0]} height="250" />}
+            })}
         </Carousel>
 
     )

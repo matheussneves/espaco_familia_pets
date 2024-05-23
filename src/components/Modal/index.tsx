@@ -1,19 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import "rsuite/dist/rsuite.css";
 import ILocais from "../../types/ILocais";
 
 
-import { Modal, ButtonToolbar, Button, Loader, Placeholder, Grid, Row, Col } from 'rsuite';
+import { Modal, ButtonToolbar, Button,Grid, Row, Col } from 'rsuite';
 import styled from '@emotion/styled';
 import { Rating } from '@mui/material';
+import CardSlide from '../CardSlide';
 
-const ImagemEstilizada = styled.img`
-    border-radius: 8px 8px 0px 0px;
-    width: 100%;
-    object-fit: cover;
-    height: 20em;
-`
+
 const ItemEstilizado = styled.li`
     list-style-type: none;
 `
@@ -51,9 +46,7 @@ const ParagrafoEstilizado = styled.p`
     margin: .5em 7px;
     font-size: 14px
 `
-const Lista = styled.ul`
-display: flex;
-`
+
 
 const ItemLista = styled.li`
 background-color: var(--branco);
@@ -72,7 +65,7 @@ margin: 1em 0em 1em 0.5em;
 
 export default function ModalDetalhes({ local }: { local: ILocais }) {
   const [open, setOpen] = React.useState(false);
-  const [rows, setRows] = React.useState(0);
+  const [rows ,setRows] = React.useState(0);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
@@ -80,7 +73,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     setTimeout(() => setRows(80), 2000);
   };
   var aceita_pets
-  if ( local.aceita_pets == 'Sim') {
+  if ( local.aceita_pets === 'Sim') {
     aceita_pets = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Aceita pets</label>
@@ -88,7 +81,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   var espaco_pets
-  if ( local.espaco_pets == 'Sim') {
+  if ( local.espaco_pets === 'Sim') {
     espaco_pets = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Espaço Pets</label>
@@ -96,7 +89,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   var aceita_criancas
-  if ( local.aceita_criancas == 'Sim') {
+  if ( local.aceita_criancas === 'Sim') {
     aceita_criancas = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Aceita Crianças</label>
@@ -104,7 +97,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   var banheiro_trocador
-  if ( local.banheiro_trocador == 'Sim') {
+  if ( local.banheiro_trocador === 'Sim') {
     banheiro_trocador = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Banheiro com Trocador</label>
@@ -112,7 +105,7 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
     </Col>)
   }
   var espaco_kids
-  if ( local.espaco_kids == 'Sim') {
+  if ( local.espaco_kids === 'Sim') {
     espaco_kids = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
         <ItemLista>
             <label>Espaço Kids</label>
@@ -140,7 +133,8 @@ export default function ModalDetalhes({ local }: { local: ILocais }) {
         <Modal.Body>
         <Grid fluid>
     <Row className="show-grid">
-    <ImagemEstilizada src={local.url} alt={`Foto local ${local.nome}`} />
+      <CardSlide imagens={local.imagens} />
+    
     </Row>
         <Row>
         <ListaEstilizada>

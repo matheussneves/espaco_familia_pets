@@ -11,5 +11,5 @@ export default interface ILocais {
     espaco_kids:  string,
     instagram_link: string,
     avaliacao: number,
-    url:string
+    imagens:Array<string>
 }

@@ -1,9 +1,7 @@
-import { read } from 'fs';
-import { Grid, Row, Col } from 'rsuite';
+import { Col } from 'rsuite';
 import ILocais from "../../../types/ILocais";
 import styled from "styled-components";
 import { Rating } from "@mui/material";
-import Botao from "../../Botao";
 import Modal from '../../Modal';
 
 
@@ -57,7 +55,7 @@ export default function GridCard ({ local }: { local: ILocais }){
     return (
       <Col xs={22} sm={12} md={12} lg={9} xl={6} xxl={6}>
         <ContainerEstilizado >
-        <ImagemEstilizada src={local.url} alt={`Foto local ${local.nome}`} />
+        <ImagemEstilizada src={local.imagens[0]} alt={`Foto local ${local.nome}`} />
              
              <ListaEstilizada>
              <ItemInformacoesEstilizado>
