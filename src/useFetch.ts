@@ -5,7 +5,7 @@ export default function useFetch<T>({ url, paramdados = '' }: { url: string,  pa
     const [erro, setErro] = useState('');
 
     useEffect(() => {
-        fetch(`http://localhost:8080/${url}/${paramdados}`).then(
+        fetch(`https://api-espaco-familia-pets.onrender.com/${url}/${paramdados}`).then(
             resposta => resposta.json()
         ).then(dados => setDados(dados)).catch((erro => setErro(erro)))
     }, [url])
