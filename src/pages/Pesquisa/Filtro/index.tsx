@@ -80,7 +80,7 @@ export default function Formulario() {
     ,[tplugarvalor, tplugarsetValor] = useState(''), [quervalor, quersetValor] = useState(``);
     function btn(){
         quersetValor(`?${nomevalor}${tplugarvalor}${convertebool(aceita_criancasisChecked,`aceita_criancas=`)}${convertebool(aceita_petsisChecked, '&aceita_pets=')}${convertebool(espaco_petsisChecked, '&espaco_pets=')}${convertebool(espaco_kidsisChecked,'&espaco_kids=')}${convertebool(banheiro_trocadorisChecked, '&banheiro_trocador=')}`)
-        fetch(`http://localhost:8080/lugar/${quervalor}`)
+        fetch(`https://api-espaco-familia-pets.onrender.com/lugar/${quervalor}`)
         .then(resposta => resposta.json())
         .then(dados => setDados(dados)).catch(erro => console.log(erro))
     }
