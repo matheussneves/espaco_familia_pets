@@ -1,13 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "rsuite/dist/rsuite.css";
 import ILocais from "../../types/ILocais";
-
-
 import { Modal, ButtonToolbar, Button,Grid, Row, Col } from 'rsuite';
 import styled from '@emotion/styled';
 import { Rating } from '@mui/material';
 import CardSlide from '../CardSlide';
-
 
 const ItemEstilizado = styled.li`
     list-style-type: none;
@@ -47,7 +44,6 @@ const ParagrafoEstilizado = styled.p`
     font-size: 14px
 `
 
-
 const ItemLista = styled.li`
 background-color: var(--branco);
 color: var(--cinza);
@@ -63,15 +59,12 @@ margin: 1em 0em 1em 0.5em;
 
 `
 
-export default function ModalDetalhes({ local }: { local: ILocais }) {
-  const [open, setOpen] = React.useState(false);
-  const [rows ,setRows] = React.useState(0);
+export default function ModalDetalhes({ local }: { local: ILocais } ) {
+  const [open, setOpen] = useState(false);
+  const [rows ,setRows] = useState(0);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  const handleEntered = () => {
-    setTimeout(() => setRows(80), 2000);
-  };
+  const handleEntered = () => {setTimeout(() => setRows(80), 2000);};
   var aceita_pets
   if ( local.aceita_pets === 'Sim') {
     aceita_pets = ( <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
